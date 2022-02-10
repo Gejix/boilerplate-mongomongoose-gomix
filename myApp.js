@@ -1,7 +1,13 @@
+var express = require('express');
+var app = express();
+var bodyParser = require("body-parser");
+
 require('dotenv').config();
 
+const mongoose = require('mongoose');
+// mongoose.connect(process.env.MONGO_URI);
 
-
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let Person;
 
